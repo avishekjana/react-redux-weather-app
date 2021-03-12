@@ -27,7 +27,7 @@ function requestError(error) {
 export default function fetchCityWeather(q='') {
   return function(dispatch) {
     dispatch(requesting())
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${q}&appid=a871dce4502a7f61db18d8733a5a100e&units=metric`)
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${q}&appid=<OPEN_WEATHER_MAP_API_KEY>&units=metric`)
       .then(response => {
         dispatch(requestSuccess(response.data))
       })
